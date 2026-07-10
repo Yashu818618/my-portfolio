@@ -505,32 +505,7 @@ position:absolute;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    @media(max-width:768px){
-    .hero{
-        flex-direction:column-reverse;
-        width:90%;
-        margin:60px auto;
-        text-align:center;
-    }
-    .left, .right{
-        width:100%;
-        padding-left:0;
-    }
-    .hero-title{
-        font-size:38px;
-    }
-    .hero-text{
-        font-size:16px;
-        margin:0 auto;
-    }
-    .right img{
-        width:220px;
-        height:280px;
-    }
-    .right img:hover{
-    cursor:pointer;   /* hero section */
-}
-}
+    
 
 }
 .hero-text{
@@ -1576,4 +1551,436 @@ body.loaded{
 
 body{
     overflow:hidden;
+}
+
+.mobile-menu{
+    display:none;
+}
+
+
+/* =====================================================
+                MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width:768px){
+
+    /* =========================
+            LOADER
+    ========================= */
+
+    #loader-name{
+        font-size:42px;
+        text-align:center;
+    }
+
+    #loader-role{
+        font-size:15px;
+        margin-top:8px;
+    }
+
+    .loader-progress-container{
+        width:220px;
+    }
+
+    /* =========================
+            NAVBAR
+    ========================= */
+
+    .navbar{
+        width:95%;
+        margin:15px auto;
+        padding:14px 16px;
+
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+        border-radius:18px;
+    }
+
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:12px;
+
+        flex:1;
+        min-width:0;
+    }
+
+    .profile-logo{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .logo h2{
+        font-size:16px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .nav-right{
+
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+
+        gap:10px;
+
+        flex:none;
+    }
+
+    /* Hide desktop nav */
+
+    .nav-item,
+    .resume-menu{
+        display:none;
+    }
+
+    .theme-menu{
+        position:relative;
+    }
+
+    .theme-btn{
+
+        width:40px;
+        height:40px;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    /* Theme Dropdown */
+
+    .theme-dropdown{
+
+        left:auto;
+        right:0;
+
+        width:170px;
+    }
+
+   
+
+   
+
+    /* =========================
+            HERO
+    ========================= */
+
+    .hero{
+
+        width:90%;
+        margin:50px auto;
+
+        display:flex;
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        gap:35px;
+    }
+
+    .left{
+
+        width:100%;
+        order:2;
+
+        padding-left:0;
+    }
+
+    .right{
+
+        width:100%;
+
+        order:1;
+
+        display:flex;
+        justify-content:center;
+    }
+
+    .right img{
+
+        width:230px;
+        height:300px;
+
+        object-fit:cover;
+
+        border-radius:18px;
+    }
+
+    .right::after{
+        display:none;
+    }
+
+    .right:hover img{
+        transform:none;
+    }
+
+    .right:hover::after{
+        display:none;
+    }
+
+    .right img:hover{
+
+        transform:none;
+
+        border:2px solid transparent;
+
+        box-shadow:none;
+    }
+
+    .right img:active{
+        transform:scale(1.03);
+    }
+
+    .hero-title{
+
+        font-size:52px;
+
+        line-height:1.1;
+    }
+
+    #decrypt-name{
+
+        display:block;
+
+        margin-top:8px;
+
+        font-size:54px;
+    }
+
+    .hero-text{
+
+        font-size:17px;
+
+        line-height:1.8;
+
+        max-width:100%;
+
+        padding:0 8px;
+    }
+
+    /* =========================
+            EDUCATION
+    ========================= */
+
+    .Education{
+
+        margin:100px auto;
+    }
+
+    .Education-card{
+
+        padding:25px;
+    }
+
+    .Education-item{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .year{
+
+        min-width:unset;
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+        margin-bottom:35px;
+    }
+
+    /* =========================
+            SKILLS
+    ========================= */
+
+    .skills{
+
+        margin:100px auto;
+    }
+
+    .skills-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    .skill-card{
+
+        height:auto;
+
+        padding:28px;
+    }
+
+    .skill-card img{
+
+        width:70px;
+        height:70px;
+    }
+
+    .skill-card h3{
+
+        font-size:24px;
+    }
+
+    /* =========================
+            PROJECTS
+    ========================= */
+
+    .projects{
+
+        margin:100px auto;
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    .project-card{
+
+        min-height:auto;
+    }
+
+    /* =========================
+            FOOTER
+    ========================= */
+
+    .footer{
+
+        margin-top:100px;
+
+        padding-top:45px;
+    }
+
+    .footer-logo h2{
+
+        font-size:18px;
+    }
+
+    .footer-socials{
+
+        gap:12px;
+    }
+
+    .footer-socials a{
+
+        width:42px;
+        height:42px;
+    }
+}
+/* Hide hamburger on desktop */
+.menu-btn{
+    display:none;
+}
+
+/* Show only on mobile */
+@media (max-width:768px){
+
+    .menu-btn{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        width:42px;
+        height:42px;
+
+        background:transparent;
+        border:none;
+
+        color:var(--text);
+
+        cursor:pointer;
+    }
+
+}
+.mobile-menu{
+
+    display:none;
+
+    position:absolute;
+
+    top:85px;
+
+    left:0;
+
+    width:100%;
+
+    background:var(--card-bg);
+
+    border:2px solid #FFD700;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    z-index:9999;
+}
+
+.mobile-menu.show{
+    display:block;
+}
+
+.mobile-menu a{
+
+    display:block;
+
+    padding:18px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-weight:600;
+
+    border-bottom:1px solid var(--border-light);
+}
+
+.mobile-menu a:last-child{
+    border-bottom:none;
+}
+
+.mobile-menu a:hover{
+    background:#FFD700;
+    color:#000;
+}
+/* Active Mobile Menu Item */
+
+.mobile-menu a.active{
+
+    background:#FFD700;
+
+    color:#000 !important;
+}
+
+.mobile-menu a.active:hover{
+
+    color:#000 !important;
+}
+/* =====================================
+   HIDE HAMBURGER IN COMPACT NAVBAR
+===================================== */
+
+@media (max-width:768px){
+
+    .navbar.compact .menu-btn{
+        display:none !important;
+    }
+
+    .navbar:not(.compact) .menu-btn{
+        display:flex !important;
+    }
+
 }
